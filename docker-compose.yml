@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  rsync-container:
+    image: rsync-container
+    restart: always
+    mem_limit: 256m
+    volumes:
+      - /srv/samba/share:/share
+      - ~/Dockerfolder/host:/host
